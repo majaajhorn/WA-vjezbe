@@ -67,6 +67,10 @@ async function dodajZadatak() {
 
 // Funkcija za brisanje zadatka
 async function obrisiZadatak(taskId, index) {
+  const potvrda = confirm('Jeste li sigurni da želite obrisati ovaj zadatak?');
+
+  if(!potvrda) return;
+  
   try {
     await axios.delete(`http://localhost:8000/api/tasks/${taskId}`);
     tasks.value.splice(index, 1); // brise iz liste
