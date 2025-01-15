@@ -28,8 +28,8 @@ const authMiddleware = async (req, res, next) => {
         req.userId = decoded.userId;
         next();
     } catch (error) {
-        console.error("Authentication error:", error);
-        res.status(400).json({ error: 'Greška prilikom autentikacije' });
+        console.error("Greška prilikom autentifikacije:", error);
+        res.status(400).json({ error: 'Greška prilikom autentifikacije' });
     }
 };
 
