@@ -1,0 +1,5 @@
+
+TaskManagerBackend/.env
+/TaskManagerBackend/node_modules
+/TaskManagerBackend_rj
+/TaskManagerFrontend_rj
