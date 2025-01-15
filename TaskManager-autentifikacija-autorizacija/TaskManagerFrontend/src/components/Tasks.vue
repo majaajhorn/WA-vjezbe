@@ -132,7 +132,7 @@ const editing = ref(false);
 const taskTags = ref("");
 const tasks = ref([]);
   
-// Add axios interceptor for authentication
+// axios
 axios.interceptors.request.use((config) => {
     const token = localStorage.getItem('token');
     
